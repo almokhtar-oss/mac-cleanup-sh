@@ -277,11 +277,6 @@ if type "brew" &>/dev/null; then
 	brew tap --repair &>/dev/null
 fi
 
-if type "gem" &>/dev/null; then
-	msg 'Cleaning up any old versions of gems'
-	gem cleanup &>/dev/null
-fi
-
 if type "docker" &>/dev/null; then
 	if ! docker ps >/dev/null 2>&1; then
 		open --background -a Docker
